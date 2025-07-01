@@ -1,12 +1,14 @@
 import express, { Express } from "express";
 
-import config from "./server.config.json";
 
-export function bootstrapApp(start: boolean = true): {
-  app: Express;
-  config: typeof config;
-  urlEncodedParser: (req: any, res: any, next: any) => void;
-} {
+const __PORT = process.env.PORT || 3000;
+const __PROTOCOL = process.env.PROTOCOL || "http";
+const __HOST = process.env.HOST || "localhost";
+
+
+// Bootstrapping App
+
+export function bootstrapApp(start: boolean = true): { app: Express; urlEncodedParser: (req: any, res: any, next: any) => void} {
   const app = express();
 
   const urlEncodedParser = express.urlencoded({ extended: false });
@@ -17,9 +19,9 @@ export function bootstrapApp(start: boolean = true): {
 
   const listen = () => {
     if (start) {
-      app.listen(config.server.port, () =>
+      app.listen(__PORT, () =>
         console.log(
-          `Server is running on ${config.server.protocol}://${config.server.host}:${config.server.port}`
+          `Server is running on ${__PROTOCOL}://${__HOST}:${__PORT}`
         )
       );
     } else {
@@ -29,11 +31,13 @@ export function bootstrapApp(start: boolean = true): {
 
   listen()
 
-  return { app, config, urlEncodedParser };
+  return { app, urlEncodedParser };
 }
 
 const { app } = bootstrapApp();
 
+
+// Routes
 
 app.get('/', (req, res) => {
     res.status(200).send('Hello World!')    
