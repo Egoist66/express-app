@@ -5,14 +5,15 @@
     "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "sourceMap": true,
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "outDir": "./dist",       // Файлы будут копироваться с сохранением структуры
+    "rootDir": "./",          // Корень проекта (теперь включает `src/`)
     "resolveJsonModule": true,
     "strict": true,
     "skipLibCheck": true,
     "allowJs": true,
     "checkJs": true,
-    "noEmit": false
+    "noEmit": false,
+    "baseUrl": "./"           // Опционально: для правильного разрешения путей
   },
   "include": ["src/**/*", "middlewares/**/*"],
   "exclude": ["node_modules", "dist"]

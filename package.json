@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "module": "ES2020",
   "description": "",
-  "main": "index.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "nodemon ./dist/app.js",
-    "build": "tsc -w",
+    "start": "node ./dist/app.js",
+    "build": "tsc",
     "dev": "concurrently  \"npm run build\" \"npm run start\"",
     "prod": "tsc" 
   },
