@@ -1,8 +1,7 @@
 {
-  "name": "04_node",
+  "name": "express-app",
   "version": "1.0.0",
   "module": "ES2020",
-  "description": "",
   "type": "module",
   "main": "dist/src/app.js",
   "scripts": {
