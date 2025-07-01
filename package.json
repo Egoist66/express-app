@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "module": "ES2020",
   "type": "module",
-  "main": "dist/src/app.js",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "node ./dist/src/app.js",
+    "start": "node ./dist/app.js",
     "build": "tsc"
    
   },
