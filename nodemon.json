@@ -3,5 +3,5 @@
     "ext": "js,ts, json",
     "verbose": true,
     "restartable": "rs",
-    "exec": "ts-node app.ts"
+    "exec": "ts-node src/app.ts"
 }

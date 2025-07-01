@@ -1,6 +1,7 @@
 {
   "name": "04_node",
   "version": "1.0.0",
+  "module": "ES2020",
   "description": "",
   "main": "index.js",
   "scripts": {
