@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "module": "ES2020",
   "description": "",
-  "main": "dist/app.js",
+  "type": "module",
+  "main": "dist/src/app.js",
   "scripts": {
-    "start": "node ./dist/app.js",
-    "build": "tsc",
-    "dev": "concurrently  \"npm run build\" \"npm run start\"",
-    "prod": "tsc" 
+    "start": "node ./dist/src/app.js",
+    "build": "tsc"
+   
   },
   "keywords": [],
   "author": "",
